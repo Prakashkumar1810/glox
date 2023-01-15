@@ -1,1 +1,15 @@
-Hello, World!
+var a = 1;
+while (a < 10) {
+  print a;
+  a = a + 1;
+}
+
+if (condition) {
+  print "yes";
+} else {
+  print "no";
+}
+
+for (var a = 1; a < 10; a = a + 1) {
+  print a;
+}

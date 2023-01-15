@@ -3,10 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"glox/scanner"
 	"glox/util"
 	"io/ioutil"
 	"os"
-	"strings"
 )
 
 type hello string
@@ -51,9 +51,9 @@ func runPrompt() {
 }
 
 func run(source string) {
-	tokens := strings.Fields(source)
+    scnr := scanner.NewScanner(source)
+	tokens := scnr.ScanTokens()
 	for i := range tokens {
-		fmt.Println(tokens[i])
+		fmt.Println(tokens[i].Lexeme)
 	}
-	fmt.Println(tokens)
 }
